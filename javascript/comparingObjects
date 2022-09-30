@@ -1,0 +1,89 @@
+const obj = {"name": "jeremy"};
+const obj2 = {"name": "brian"};
+const obj3 = {"name": "jeremy"};
+const obj4 = {};
+
+const test6 = (c1, c2) => {
+    if (Object.keys(c1).length === 0) {
+        console.log('hello there!!!')
+        return true;
+    }
+    for (let key in c1) {
+            console.log('im here')
+        for (let key2 in c2) {
+            if (c1[key] === c2[key2]) {
+                console.log(c1[key])
+                console.log(c2[key2])
+                return true;
+            }
+            else {
+                console.log(c1[key])
+                console.log(c2[key2])
+                return false;
+                
+            }
+        }
+    }
+}
+
+console.log(test6(obj4, obj4))
+
+
+// Many failed tests below!
+/*
+const test = (c1) => {
+    arr = []
+    for (let key in c1) {
+        arr.push(key)
+    }
+    return arr
+}
+console.log(test(obj))
+*/
+
+/*
+const test4 = (c1, c2) => {
+    for (let key in c1) {
+        for (let key2 in c2) {
+            if (c1[key] === c2[key2]) {
+                return true;
+            }
+            else {
+                console.log(c1[key])
+                console.log(c2[key2])
+                return false;
+            }
+        }
+    }
+}
+console.log(test4(obj, obj2))
+*/
+/*
+const test5 = (c1, c2) => {
+    for (let key in c1) {
+        for (let key2 in c2) {
+            if (c1[key] === c2[key2]) {
+                console.log(c1[key])
+                console.log(c2[key2])
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+    }
+}
+console.log(test5(obj, obj3))
+*/
+
+/*
+var test3 = {
+    "name" : "jeremy",
+    "age" : 14,
+    "gender": 'male'
+}
+for (var key in test3) {
+    console.log(key)
+    console.log(test3[key])
+}
+*/
